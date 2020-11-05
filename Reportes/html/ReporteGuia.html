@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+<style type="text/css" media="screen">
+	body
+    {
+	    font: 8pt Verdana, Geneva, sans-serif;
+	    line-height: 1.5;
+    }
+    #section > table 
+    {
+        border-top: solid 1px black;
+        width:100%;
+    	
+    }
+
+
+    #section table th
+    {
+        text-align:center;
+                      
+                      
+    }
+    #section table td
+    {
+        text-align:right;
+                      
+    }   
+    #DetalleDevolucion
+    {
+    	/*width:20%;*/
+    }
+    #DetalleProducto
+    {
+    	/*width:80%;*/
+    }
+    #DetalleCabecera
+    {
+    	width:100%;
+    }	
+
+</style>
+<style type="text/css" media="print">
+
+@page 
+{
+	  size: auto;   /* auto is the initial value */ 
+
+        /* this affects the margin in the printer settings */ 
+        margin: 0mm 0mm 0mm 0mm;  
+}
+*
+{
+	margin: 0;
+	
+}
+body  
+{ 
+    /* this affects the margin on the content before sending to printer */ 
+    margin: 0px;  
+    font: 12pt Verdana, Geneva, sans-serif; 
+    line-height: 1.5;
+}       
+</style>
+</head>
+<body>
+<div id="contenedor" style='width:1100px;'>
+	<!--<div id="header">
+		<center>Reporte venta</center><br/>
+		<div style="float:left">Cliente: {CLIENTE}</div>
+		<div style="float:right">Fecha : {FECHA}</div>
+		<div style="Clear:both;"></div>
+		<hr/>
+	</div> -->
+	
+	<div id= "main">
+	    <table>
+	    <tr><td style="border:dashed 1px black;">
+	            <div style="width:100%">
+	            Fecha : {FECHA}&nbsp;&nbsp;&nbsp;Cliente: {CLIENTE}<br />
+	            </div>
+	    <!--inicio original-->{@@DETALLEVENTA}<!--fin original--></td>
+	    <td style="border:dashed 1px black;">
+	        <div style="width:100%">
+	            Fecha : {FECHA}&nbsp;&nbsp;&nbsp;Cliente: {CLIENTE}<br />
+	        </div>
+	    <!--inicio copia-->{@@DETALLEVENTACOPIA}<!--fin copia--></td></tr></table>
+	    
+	</div>
+</div>	
+</body>
+</html>
